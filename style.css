@@ -1,0 +1,667 @@
+/* ---------------Reset defaults--------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* Defining colour set based on Coolors.co service */
+:root {
+  --color1: #d5573b;
+  --color2: #fabc3c;
+  --color3: #eaefbd;
+  --color4: rgb(46, 41, 78);
+  --color5: rgb(51, 92, 103);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color4);
+}
+
+/* ---------------Setting up Navbar--------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: var(--color5);
+  z-index: 10;
+}
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+}
+nav {
+  background: var(--color5);
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: white;
+  display: block;
+  padding: 20px 20px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+nav ul li a:hover:not(.active) {
+  background-color: var(--color1);
+}
+.active {
+  background-color: var(--color2);
+}
+.nav-logo {
+  background-image: url(./images/gp-logo.jpeg);
+  background-size: cover;
+  min-width: 58px;
+  min-height: 58px;
+}
+
+/* ---------------Banner setup--------------- */
+.topBanner {
+  background-image: url(./images/banners/gp-holy-family.jpg);
+  background-size: cover;
+  height: 80vh;
+  max-height: 700px;
+  background-position: center;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.topBanner h1 {
+  font-size: 5em;
+  text-align: left;
+  color: var(--color1);
+}
+.topBanner.bottomBanner h1 {
+  color: var(--color3);
+}
+.topBanner.about {
+  background-image: url(./images/banners/sea-man.jpeg);
+}
+.topBanner.training {
+  background-image: url(./images/banners/trainings.jpeg);
+}
+.bottomBanner {
+  background-image: url(./images/children.jpg);
+}
+.bottomBanner.about {
+  background-image: url(./images/banners/team.jpeg);
+  background-size: cover;
+  height: 80vh;
+  max-height: 700px;
+  background-position: center;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.bottomBanner.about h1 {
+  font-size: 5em;
+  color: var(--color1);
+}
+.quote {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: bold;
+  max-width: 650px;
+  color: white;
+}
+.quote-one {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(46, 41, 78, 0.7)),
+      to(rgba(51, 92, 103, 0.7))
+    ),
+    url(./images/banners/gp-holy-family.jpg) center/cover fixed no-repeat;
+  background: -webkit-linear-gradient(
+      rgba(46, 41, 78, 0.7),
+      rgba(51, 92, 103, 0.7)
+    ),
+    url(./images/banners/gp-holy-family.jpg) center/cover fixed no-repeat;
+  background: -o-linear-gradient(rgba(46, 41, 78, 0.7), rgba(51, 92, 103, 0.7)),
+    url(./images/banners/gp-holy-family.jpg) center/cover fixed no-repeat;
+  background: linear-gradient(rgba(46, 41, 78, 0.7), rgba(51, 92, 103, 0.7)),
+    url(./images/banners/gp-holy-family.jpg) center/cover fixed no-repeat;
+  height: 80vh;
+  max-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.quote-two {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(46, 41, 78, 0.7)),
+      to(rgba(51, 92, 103, 0.7))
+    ),
+    url(./images/banners/sea-man.jpeg) center/cover fixed no-repeat;
+  background: -webkit-linear-gradient(
+      rgba(46, 41, 78, 0.7),
+      rgba(51, 92, 103, 0.7)
+    ),
+    url(./images/banners/sea-man.jpeg) center/cover fixed no-repeat;
+  background: -o-linear-gradient(rgba(46, 41, 78, 0.7), rgba(51, 92, 103, 0.7)),
+    url(./images/banners/sea-man.jpeg) center/cover fixed no-repeat;
+  background: linear-gradient(rgba(46, 41, 78, 0.7), rgba(51, 92, 103, 0.7)),
+    url(./images/banners/sea-man.jpeg) center/cover fixed no-repeat;
+  height: 80vh;
+  max-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* ---------------main - copy setup--------------- */
+main {
+  display: block;
+  /* border: 2px solid green; */
+}
+.article {
+  background-color: white;
+  padding-top: 20px;
+}
+.main-header {
+  font-size: 2.5em;
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+}
+.main-header.blog {
+  margin-top: 60px;
+}
+.main-para {
+  font-size: 1.1em;
+  line-height: 1.3em;
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+  text-align: justify;
+}
+main a {
+  text-decoration: none;
+  color: var(--color1);
+  font-weight: bold;
+}
+#top {
+  visibility: hidden;
+}
+
+/* ------------ Subscription form setup ------------ */
+.subscribe-form {
+  height: 400px;
+  background-color: var(--color2);
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.subscribe-form p {
+  font-size: 1.5em;
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+}
+.subscribe-form span {
+  color: var(--color1);
+  font-size: 1em;
+}
+.subscribe-form h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+form input,
+form input#email {
+  width: 300px;
+  text-align: center;
+  margin: 5px auto;
+}
+form input[type="submit"] {
+  color: white;
+  background-color: var(--color1);
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+}
+form input[type="submit"]:hover {
+  cursor: pointer;
+}
+form input[type="text"] {
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  padding: 0px;
+  margin: 0px;
+}
+form label {
+  text-align: center;
+  margin: 10px auto;
+}
+/* ---------------Blog setup--------------- */
+.blog-page {
+  /* border: 2px solid green; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1080px;
+  margin: auto;
+}
+.side-panel {
+  /* border: 2px solid red; */
+  /* background: lightgoldenrodyellow; */
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-top: 140px;
+}
+.center-panel {
+  /* border: 2px solid blue; */
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.author-info {
+  margin: auto;
+  max-width: 800px;
+  padding-left: 20px;
+}
+.author-name {
+  /* border: 2px solid red; */
+  padding-left: 80px;
+}
+.author-info img {
+  width: 60px;
+  float: left;
+  border: 2px solid var(--color5);
+}
+.blog-date {
+  padding: 10px 0px 0px 80px;
+}
+.blog-date {
+  color: grey;
+}
+.blog-image {
+  margin: auto;
+  padding: 20px;
+  /* border: 2px solid red; */
+  max-width: 800px;
+  position: relative;
+}
+.blog-image img {
+  max-width: 760px;
+  width: calc(100vw - 40px);
+}
+.bottom-info-name {
+  max-width: 400px;
+}
+.author-job {
+  margin-left: 80px;
+  color: grey;
+}
+.author-writeup {
+  max-width: 300px;
+  margin-left: 80px;
+  padding-top: 20px;
+}
+.author-writeup p {
+  font-size: 0.9em;
+}
+.related-articles {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+.related-articles h2 {
+  margin-left: 20px;
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+.article-link {
+  margin: 20px;
+  -webkit-box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.04);
+}
+.article-link img {
+  max-width: 180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.article-link h3 {
+  font-size: 2em;
+}
+.article-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* ---------------Home - table setup--------------- */
+.table-div {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.tableRow1,
+.tableRow2,
+.tableRow3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.table1-header,
+.table2-header,
+.table3-header {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.table1-header h2,
+.table2-header h2,
+.table3-header h2 {
+  font-size: 1.5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.table1-header img,
+.table2-header img,
+.table3-header img {
+  width: 150px;
+  padding-bottom: 10px;
+}
+.table1-para,
+.table2-para,
+.table3-para {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding: 20px;
+}
+.table1-para p,
+.table2-para p,
+.table3-para p {
+  text-align: justify;
+}
+
+/* ---------------Setup footer--------------- */
+footer {
+  background: var(--color5);
+}
+.top-footer {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.one,
+.two,
+.three,
+.four {
+  margin-top: 0px;
+  margin-left: 20px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.top-footer a {
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.829);
+}
+.bottom-footer {
+  color: var(--color4);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer div {
+  max-width: 800px;
+  margin: auto;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+footer a:hover {
+  color: var(--color1);
+}
+
+/* -------------Training Table setup------------- */
+.header-container,
+.first-training,
+.second-training,
+.third-training {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+.header-container h2 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.first-training p {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.second-training p {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.third-training p {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.table-container {
+  border: 1px solid var(--color2);
+  max-width: 800px;
+  margin: auto;
+}
+
+/* --------Media query for small screen-------- */
+@media screen and (max-width: 500px) {
+  /* Blog article cards */
+  .article-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .article-link h3 {
+    font-size: 1.5em;
+  }
+  .related-articles h2 {
+    margin-left: 20px;
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  .table-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .tableRow1,
+  .tableRow2,
+  .tableRow3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* Navbar adjustment */
+  nav ul {
+    display: block;
+  }
+  .navbar-container {
+    display: block;
+  }
+  .nav-logo {
+    position: absolute;
+    min-width: 170px;
+    min-height: 170px;
+  }
+  nav a {
+    padding: 8px 15vw;
+    text-align: right;
+  }
+
+  /* Banner adjustment */
+  .topBanner h1,
+  about h1 {
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .topBanner {
+    max-height: 500px;
+  }
+}
+
+/* ---------- Contact sheet setup ---------- */
+.form-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--color3);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.form-container p {
+  max-width: 600px;
+  margin: 50px auto;
+}
+.form-container span {
+  color: var(--color1);
+  font-size: 1em;
+}
+.contact-form {
+  /* border: 2px solid blue; */
+  width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contact-form label,
+.contact-form p,
+.form-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
